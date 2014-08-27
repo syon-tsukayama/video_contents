@@ -1,0 +1,324 @@
+<?php
+/**
+ * トップページテンプレート
+ */
+
+?>
+
+    <div class="row-fluid">
+        <div class="span12">
+
+            <div class="hero-unit">
+
+                <h2>Welcome!　Fishery and Ocean Technologies!!</h2>
+                <h3>目指せ、水産マイスター！　Just do it！</h3>
+
+                <div class="carousel slide" id="myCarousel">
+
+                    <ol class="carousel-indicators">
+                        <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+                        <li data-slide-to="1" data-target="#myCarousel" class=""></li>
+                        <li data-slide-to="2" data-target="#myCarousel" class=""></li>
+                        <li data-slide-to="3" data-target="#myCarousel" class=""></li>
+                        <li data-slide-to="4" data-target="#myCarousel" class=""></li>
+                        <li data-slide-to="5" data-target="#myCarousel" class=""></li>
+                        <li data-slide-to="6" data-target="#myCarousel" class=""></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+
+                        <div class="item active">
+                            <div class="row-fluid">
+                                <img src="./contents/thumbnail/slider/title.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row-fluid">
+                                <img src="./contents/thumbnail/slider/yacht.jpg" alt="">
+                                <div class="carousel-caption">
+                                    <h4>YACHT</h4>
+                                    <p>風を帆に受け、大海原を走ろう。海を、自然を体で感じ、冒険しよう。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row-fluid">
+                                <img src="./contents/thumbnail/slider/yuhi.jpg" alt="">
+                                <div class="carousel-caption">
+                                    <h4>SPIRIT</h4>
+                                    <p>The greatest pleasure in life is doing what people say you cannot do.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row-fluid">
+                                <img src="./contents/thumbnail/slider/bi-ti.jpg" alt="">
+                                <div class="carousel-caption">
+                                    <h4>CONTENT</h4>
+                                    <p>水産の技術は多種多様。コンテンツを活用して技術を身につけよう！</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row-fluid">
+                                <img src="./contents/thumbnail/slider/cutter.jpg" alt="">
+                                <div class="carousel-caption">
+                                    <h4>CUTTER BOAT</h4>
+                                    <p>力漕！櫂を握り、力強く、体重を乗せ、水を掴む。１４名が息を合わせてGo ahead！</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row-fluid">
+                                <img src="./contents/thumbnail/slider/maguro.jpg" alt="">
+                                <div class="carousel-caption">
+                                    <h4>FOOD PROCESSING</h4>
+                                    <p>食は生活の基本。マグロやカツオを捌いて加工しよう。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row-fluid">
+                                <img src="./contents/thumbnail/slider/eyesplice.jpg" alt="">
+                                <div class="carousel-caption">
+                                    <h4>SPLICE</h4>
+                                    <p>ロープを解いて、編み込む。スプライスをしてみよう。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a data-slide="prev" href="#myCarousel" class="left carousel-control">&lsaquo;</a>
+                    <a data-slide="next" href="#myCarousel" class="right carousel-control">&rsaquo;</a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row-fluid">
+        <ul class="thumbnails">
+
+            <li class="span4">
+                <div class="thumbnail">
+                    <a href="index.php?menu_id=2&content_id=2">
+                        <img alt="300x200" style="width: 300px; height: 200px;" src="./contents/thumbnail/1_ro-pu/hitoe.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>結索</h3>
+                        <p>　結索とはロープワークことです。結びの用途は結節、結合、結着などに分類できます。代表的な結索にもやい結び、巻き結び、８の字結び、本結び、錨結び等があります。</p>
+                        <p><a class="btn btn-primary active" href="index.php?menu_id=2&content_id=2">動画一覧 &raquo;</a></p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="span4">
+                <div class="thumbnail">
+                    <a href="./index.php?menu_id=3&content_id=9">
+                        <img alt="300x200" style="width: 300px; height: 200px;" src="./contents/thumbnail/2_splices/eyesplices.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>アイスプライス</h3>
+                        <p>　スプライスとは、ロープの端に輪（アイ）を作ったり、端止めなどの端末処理の技術です。 ロープを構成しているストランドを、互いに挟み込んだり組み合わせたりして編み込みます。  </p>
+                        <p><a class="btn btn-primary active" href="index.php?menu_id=3&content_id=9">動画一覧  &raquo;</a></p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="span4">
+                <div class="thumbnail">
+                    <a href="index.php?menu_id=4&content_id=16">
+                        <img alt="300x200" style="width: 300px; height: 200px;"  src="./contents/thumbnail/3_henmou/kaeru.jpg" >
+                    </a>
+                    <div class="caption">
+                        <h3>編網</h3>
+                        <p>　漁網の編み方を学習します。アバリと目板を使って、本目結びと蛙又結びの２つの方法によって網を編みます。タモ網やハンモックの製作にも応用できます。水産科高校生必須の技術です。 </p>
+                        <p><a class="btn btn-primary active" href="index.php?menu_id=4&content_id=16">動画一覧 &raquo;</a></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="row-fluid">
+        <ul class="thumbnails">
+            <li class="span4">
+                <div class="thumbnail">
+                    <a href="index.php?menu_id=8&content_id=37">
+                        <img alt="300x200" style="width: 300px; height: 200px;" src="./contents/thumbnail/7_shokuhin/magurokaitai.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>食品加工</h3>
+                        <p>　食品は加工、調味、保存の知識や技術によって成り立っています。原料の特性を理解し、加工し、製品化します。生活を支え、豊かにしてくれる食品の製造技術を学びます。</p>
+                        <p><a class="btn btn-primary active"　 href="index.php?menu_id=8&content_id=37">動画一覧 &raquo;</a></p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="span4">
+                <div class="thumbnail">
+                    <a href="index.php?menu_id=5&content_id=22">
+                        <img alt="300x200" style="width: 300px; height: 200px;" src="./contents/thumbnail/4_mokei/sabani.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>模型製作</h3>
+                        <p>　サバニ模型製作、ミニチュアサーフボード製作を通して船体や機材の構造を知り、製作技術を学びます。とくにサバニ模型製作では、木造船における木工技術を学びます。</p>
+                        <p><a class="btn btn-primary active" href="index.php?menu_id=5&content_id=22">動画一覧  &raquo;</a></p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="span4">
+                <div class="thumbnail">
+                    <a href="index.php?menu_id=6&content_id=27">
+                        <img alt="300x200" style="width: 300px; height: 200px;"  src="./contents/thumbnail/5_gyogu/hariegi.jpg">
+                    </a>
+                    <div class="caption">
+                        <h3>漁具製作</h3>
+                        <p>　漁具は網漁具・釣り漁具・雑漁具に大別されます。実習では餌木製作、ルアー製作、仕掛け作りなどの技術を学びます。製作後は海で使ってみましょう。オリジナル漁具を製作してみましょう。 </p>
+                        <p><a class="btn btn-primary active" href="index.php?menu_id=6&content_id=27">動画一覧 &raquo;</a></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <h1>再生回数ランキング</h1>
+    <hr />
+
+<?php
+// 再生件数を取得する
+$sql =<<<EOS
+SELECT `content_id`, COUNT(`id`) AS `play_count`
+FROM `play_logs_table`
+GROUP BY `content_id` HAVING COUNT(`id`) > 0
+ORDER BY `play_count` DESC;
+EOS;
+
+$stmt_select_play_logs = $conn->prepare($sql);
+
+$stmt_select_play_logs->execute();
+
+// 動画情報表示のためのコンテンツテーブル検索SQL
+$sql =<<<EOS
+SELECT `id`, `title`, `content`, `image_name`, `mp4_file_name`, `ogv_file_name`
+FROM `contents_table`
+WHERE `id` = :content_id;
+EOS;
+
+$stmt_select_contents = $conn->prepare($sql);
+
+$play_counts = array();
+
+// 検索結果取得
+while($row = $stmt_select_play_logs->fetch())
+{
+    $play_counts[] = array(
+        'content_id' => $row['content_id'],
+        'play_count' => $row['play_count']
+        );
+}
+
+$total_count = count($play_counts);
+
+if($total_count > 0)
+{
+    // 検索結果取得
+    $row_count = 0;
+
+    foreach($play_counts as $count_data)
+    {
+        $content_id = $count_data['content_id'];
+        $play_count = $count_data['play_count'];
+
+        $stmt_select_contents->bindValue(':content_id', $content_id, PDO::PARAM_INT);
+        $stmt_select_contents->execute();
+
+        $row = $stmt_select_contents->fetch();
+
+        $row_count++;
+
+        if(($row_count % 3) === 1)
+        {
+?>
+            <div class="row-fluid">
+                <ul class="thumbnails">
+<?php
+        }
+
+
+        $content_id = $row['id'];
+
+        $modal_id = 'movie_modal_'.$row_count;
+
+        $image_path = './contents/thumbnail/'.$row['image_name'];
+
+        $mp4_file_path = './contents/movies/'.$row['mp4_file_name'];
+
+        $ogv_file_path = './contents/movies/'.$row['ogv_file_name'];
+?>
+
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <a data-target="#<?php echo $modal_id; ?>" data-toggle="modal" href="#" class="play_count" data-content_id="<?php echo $content_id; ?>">
+                                <img alt="<?php echo $row['title']; ?>" style="width: 300px; height: 200px;" src="<?php echo $image_path; ?>">
+                            </a>
+                            <div class="caption">
+                                <h3><?php echo $row['title']; ?></h3>
+                                <p><?php echo $row['content']; ?></p>
+                                <p>
+                                    <a class="btn btn-primary play_count" data-target="#<?php echo $modal_id; ?>" data-toggle="modal" href="#" data-content_id="<?php echo $content_id; ?>">再生</a>
+                                    <a class="btn play_count" href="<?php echo $mp4_file_path; ?>" data-content_id="<?php echo $content_id; ?>">mp4</a>
+                                    <a class="btn play_count" href="<?php echo $ogv_file_path; ?>" data-content_id="<?php echo $content_id; ?>">ogv</a>
+                                    <i class="icon-play"></i>再生回数：<?php echo $play_count; ?>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="<?php echo $modal_id; ?>" class="modal hide fade" tabindex="-1">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h3><?php echo $row['title']; ?></h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    <video poster="<?php echo $image_path; ?>" width="320" height="180" controls loop preload="none">
+                                        <source src="<?php echo $mp4_file_path; ?>">
+                                        <source src="<?php echo $ogv_file_path; ?>">
+                                        <p>動画を再生するには、videoタグをサポートしたブラウザが必要です。</p>
+                                    </video>
+                                </p>
+                            </div>
+                        </div>
+
+                    </li>
+
+<?php
+        if(($row_count % 3) === 0 || $row_count == $total_count)
+        {
+?>
+                </ul>
+            </div>
+<?php
+        }
+    }
+}
+
+
+
+
+
+
+?>
+
