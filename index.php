@@ -146,7 +146,7 @@ if(empty($row['template_name']) || !is_file('./tpl/'.$row['template_name']))
 
                     <div class="alert alert-error">
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        <strong>Warning!</strong> このページは現在、閲覧できません。
+                        <strong>Warning!</strong> このページは現在、開発中につき閲覧できません。
                     </div>
 
                 </div>
