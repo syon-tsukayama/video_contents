@@ -162,7 +162,7 @@ else
             <hr />
 
             <footer>
-                <p></p>
+                <?php echo $_footer; ?>
             </footer>
 
         </div><!--/.fluid-container-->

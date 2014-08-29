@@ -11,3 +11,6 @@ $_db_user = 'xxx';
 
 // データベース接続パスワード
 $_db_password = 'xxx';
+
+// フッタ表示
+$_footer = '';
