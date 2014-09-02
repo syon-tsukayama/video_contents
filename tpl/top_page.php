@@ -8,6 +8,7 @@
 $sql =<<<EOS
 SELECT `content_id`, COUNT(`id`) AS `play_count`
 FROM `play_logs_table`
+WHERE `content_id` IN (SELECT `id` FROM `contents_table` WHERE `publish_status` = 1)
 GROUP BY `content_id` HAVING COUNT(`id`) > 0
 ORDER BY `play_count` DESC;
 EOS;
@@ -20,7 +21,7 @@ $stmt_select_play_logs->execute();
 $sql =<<<EOS
 SELECT `id`, `title`, `content`, `image_name`, `mp4_file_name`, `ogv_file_name`
 FROM `contents_table`
-WHERE `id` = :content_id;
+WHERE `publish_status` = 1 AND `id` = :content_id;
 EOS;
 
 $stmt_select_contents = $conn->prepare($sql);
