@@ -121,11 +121,11 @@ EOS;
 
         $modal_id = 'movie_modal_'.$row_count;
 
-        $image_path = './contents/thumbnail/'.$row['image_name'];
+        $image_path = DIR_PATH_IMAGE.$row['image_name'];
 
-        $mp4_file_path = './contents/movies/'.$row['mp4_file_name'];
+        $mp4_file_path = DIR_PATH_MP4.$row['mp4_file_name'];
 
-        $ogv_file_path = './contents/movies/'.$row['ogv_file_name'];
+        $ogv_file_path = DIR_PATH_OGV.$row['ogv_file_name'];
 ?>
 
                     <li class="span4">

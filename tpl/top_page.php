@@ -78,11 +78,11 @@ $rank = 0;
 
         $modal_id = 'movie_modal_'.$row_count;
 
-        $image_path = './contents/thumbnail/'.$row['image_name'];
+        $image_path = DIR_PATH_IMAGE.$row['image_name'];
 
-        $mp4_file_path = './contents/movies/'.$row['mp4_file_name'];
+        $mp4_file_path = DIR_PATH_MP4.$row['mp4_file_name'];
 
-        $ogv_file_path = './contents/movies/'.$row['ogv_file_name'];
+        $ogv_file_path = DIR_PATH_OGV.$row['ogv_file_name'];
 ?>
 
                    <li class="span12">
@@ -162,13 +162,13 @@ $rank = 0;
 
                         <div class="item active">
                             <div class="row-fluid">
-                                <img src="./contents/thumbnail/slider/title.jpg" alt="">
+                                <img src="<?php echo DIR_PATH_IMAGE.'slider/title.jpg'; ?>" alt="">
                             </div>
                         </div>
 
                         <div class="item">
                             <div class="row-fluid">
-                                <img src="./contents/thumbnail/slider/yacht.jpg" alt="">
+                                <img src="<?php echo DIR_PATH_IMAGE.'slider/yacht.jpg'; ?>" alt="">
                                 <div class="carousel-caption">
                                     <h4>YACHT</h4>
                                     <p>風を帆に受け、大海原を走ろう。海を、自然を体で感じ、冒険しよう。</p>
@@ -178,7 +178,7 @@ $rank = 0;
 
                         <div class="item">
                             <div class="row-fluid">
-                                <img src="./contents/thumbnail/slider/yuhi.jpg" alt="">
+                                <img src="<?php echo DIR_PATH_IMAGE.'slider/yuhi.jpg'; ?>" alt="">
                                 <div class="carousel-caption">
                                     <h4>SPIRIT</h4>
                                     <p>The greatest pleasure in life is doing what people say you cannot do.</p>
@@ -188,7 +188,7 @@ $rank = 0;
 
                         <div class="item">
                             <div class="row-fluid">
-                                <img src="./contents/thumbnail/slider/bi-ti.jpg" alt="">
+                                <img src="<?php echo DIR_PATH_IMAGE.'slider/bi-ti.jpg'; ?>" alt="">
                                 <div class="carousel-caption">
                                     <h4>CONTENT</h4>
                                     <p>水産の技術は多種多様、コンテンツを活用して技術を身につけよう！</p>
@@ -198,7 +198,7 @@ $rank = 0;
 
                         <div class="item">
                             <div class="row-fluid">
-                                <img src="./contents/thumbnail/slider/cutter.jpg" alt="">
+                                <img src="<?php echo DIR_PATH_IMAGE.'slider/cutter.jpg'; ?>" alt="">
                                 <div class="carousel-caption">
                                     <h4>CUTTER BOAT</h4>
                                     <p>力漕！櫂を握り、力強く、体重を乗せ、水を掴む。１４名が息を合わせてGo ahead！</p>
@@ -208,7 +208,7 @@ $rank = 0;
 
                         <div class="item">
                             <div class="row-fluid">
-                                <img src="./contents/thumbnail/slider/maguro.jpg" alt="">
+                                <img src="<?php echo DIR_PATH_IMAGE.'slider/maguro.jpg'; ?>" alt="">
                                 <div class="carousel-caption">
                                     <h4>FOOD PROCESSING</h4>
                                     <p>食は生活の基本。マグロやカツオを捌いて加工しよう。</p>
@@ -218,7 +218,7 @@ $rank = 0;
 
                         <div class="item">
                             <div class="row-fluid">
-                                <img src="./contents/thumbnail/slider/eyesplice.jpg" alt="">
+                                <img src="<?php echo DIR_PATH_IMAGE.'slider/eyesplice.jpg'; ?>" alt="">
                                 <div class="carousel-caption">
                                     <h4>SPLICE</h4>
                                     <p>ロープを解いて、編み込む。スプライスをしてみよう。</p>
@@ -245,7 +245,7 @@ $rank = 0;
             <li class="span4">
                 <div class="thumbnail">
                     <a href="index.php?menu_id=2&page_id=2">
-                        <img alt="300x200" style="width: 300px; height: 200px;" src="./contents/thumbnail/1_ro-pu/hitoe.jpg">
+                        <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'1_ro-pu/hitoe.jpg'; ?>">
                     </a>
                     <div class="caption">
                         <h3>結索</h3>
@@ -258,7 +258,7 @@ $rank = 0;
             <li class="span4">
                 <div class="thumbnail">
                     <a href="index.php?menu_id=3&page_id=9">
-                        <img alt="300x200" style="width: 300px; height: 200px;" src="./contents/thumbnail/2_splices/eyesplices.jpg">
+                        <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'2_splices/eyesplices.jpg'; ?>">
                     </a>
                     <div class="caption">
                         <h3>アイスプライス</h3>
@@ -271,7 +271,7 @@ $rank = 0;
             <li class="span4">
                 <div class="thumbnail">
                     <a href="index.php?menu_id=4&page_id=14">
-                        <img alt="300x200" style="width: 300px; height: 200px;"  src="./contents/thumbnail/3_henmou/kaeru.jpg" >
+                        <img alt="300x200" style="width: 300px; height: 200px;"  src="<?php echo DIR_PATH_IMAGE.'3_henmou/kaeru.jpg'; ?>" >
                     </a>
                     <div class="caption">
                         <h3>編網</h3>
@@ -289,7 +289,7 @@ $rank = 0;
             <li class="span4">
                 <div class="thumbnail">
                     <a href="index.php?menu_id=8&page_id=25">
-                        <img alt="300x200" style="width: 300px; height: 200px;" src="./contents/thumbnail/7_shokuhin/magurokaitai.jpg">
+                        <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'7_shokuhin/magurokaitai.jpg'; ?>">
                     </a>
                     <div class="caption">
                         <h3>食品加工</h3>
@@ -302,7 +302,7 @@ $rank = 0;
             <li class="span4">
                 <div class="thumbnail">
                     <a href="index.php?menu_id=5&page_id=18">
-                        <img alt="300x200" style="width: 300px; height: 200px;" src="./contents/thumbnail/4_mokei/sabani.jpg">
+                        <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'4_mokei/sabani.jpg'; ?>">
                     </a>
                     <div class="caption">
                         <h3>模型製作</h3>
@@ -315,7 +315,7 @@ $rank = 0;
             <li class="span4">
                 <div class="thumbnail">
                     <a href="index.php?menu_id=6&page_id=21">
-                        <img alt="300x200" style="width: 300px; height: 200px;"  src="./contents/thumbnail/5_gyogu/hariegi.jpg">
+                        <img alt="300x200" style="width: 300px; height: 200px;"  src="<?php echo DIR_PATH_IMAGE.'5_gyogu/hariegi.jpg'; ?>">
                     </a>
                     <div class="caption">
                         <h3>漁具製作</h3>

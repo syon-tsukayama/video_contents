@@ -14,3 +14,13 @@ $_db_password = 'xxx';
 
 // フッタ表示
 $_footer = '';
+
+
+// 画像ファイル格納ディレクトリのパス
+define('DIR_PATH_IMAGE', './contents/thumbnail/');
+
+// mp4ファイル格納ディレクトリのパス
+define('DIR_PATH_MP4', './contents/movies/');
+
+// ogvファイル格納ディレクトリのパス
+define('DIR_PATH_OGV', './contents/movies/');
