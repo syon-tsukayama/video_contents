@@ -91,6 +91,7 @@ else
 $sql =<<<EOS
 SELECT `id`, `name`, `page_id`, `order_no`
 FROM `menus_table`
+WHERE `publish_status` = 1
 ORDER BY `order_no` ASC;
 EOS;
 
