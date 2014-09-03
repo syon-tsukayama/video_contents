@@ -3,7 +3,6 @@
  * トップページテンプレート
  */
 
-
 // 再生件数を取得する
 $sql =<<<EOS
 SELECT `content_id`, COUNT(`id`) AS `play_count`
@@ -14,29 +13,10 @@ ORDER BY `play_count` DESC;
 EOS;
 
 $stmt_select_play_logs = $conn->prepare($sql);
-
 $stmt_select_play_logs->execute();
 
-// 動画情報表示のためのコンテンツテーブル検索SQL
-$sql =<<<EOS
-SELECT `id`, `title`, `content`, `image_name`, `mp4_file_name`, `ogv_file_name`
-FROM `contents_table`
-WHERE `publish_status` = 1 AND `id` = :content_id;
-EOS;
-
-$stmt_select_contents = $conn->prepare($sql);
-
 $play_counts = array();
-?>
 
-
-    <div class="row-fluid">
-            <div class="span3">
-            <div class="well sidebar-nav">
-
-                <ul class="nav nav-list">
-                    <li class="nav-header"><h4>人気動画ランキング３</h4></li>
-<?php
 // 検索結果取得
 while($row = $stmt_select_play_logs->fetch())
 {
@@ -45,11 +25,30 @@ while($row = $stmt_select_play_logs->fetch())
         'play_count' => $row['play_count']
         );
 }
+?>
 
-$total_count = count($play_counts);
 
-if($total_count > 0)
+    <div class="row-fluid">
+        <div class="span3">
+            <div class="well sidebar-nav">
+
+                <ul class="nav nav-list">
+                    <li class="nav-header"><h4>人気動画ランキング３</h4></li>
+<?php
+
+$cnt_play_counts = count($play_counts);
+
+if($cnt_play_counts > 0)
 {
+    // 動画情報表示のためのコンテンツテーブル検索SQL
+    $sql =<<<EOS
+SELECT `id`, `title`, `content`, `image_name`, `mp4_file_name`, `ogv_file_name`
+FROM `contents_table`
+WHERE `publish_status` = 1 AND `id` = :content_id;
+EOS;
+
+    $stmt_select_contents = $conn->prepare($sql);
+
     // 検索結果取得
     $row_count = 0;
 $rank = 0;
@@ -121,7 +120,7 @@ $rank = 0;
                     </li>
 
 <?php
-        if(($row_count % 3) === 0 || $row_count == $total_count)
+        if(($row_count % 3) === 0 || $row_count == $cnt_play_counts)
         {
 ?>
                 </ul>
