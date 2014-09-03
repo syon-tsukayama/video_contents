@@ -326,6 +326,70 @@ $rank = 0;
             </li>
         </ul>
     </div>
+
+
+    <div class="row-fluid">
+
+        <div class="span8 well well-small">
+
+            <h3>注目トピックス</h3>
+            <div class="row-fluid">
+                <ul class="thumbnails">
+
+                    <li class="span6">
+                        <div class="thumbnail">
+                            <a href="index.php?menu_id=8&page_id=25">
+                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'7_shokuhin/magurokaitai.jpg'; ?>">
+                            </a>
+                            <div class="caption">
+                                <h3>食品加工</h3>
+                                <p>　食品は加工、調味、保存の知識や技術によって成り立っています。原料の特性を理解し、加工し、製品化します。生活を支え、豊かにしてくれる食品の製造技術を学びます。</p>
+                                <p><a class="btn btn-primary" href="index.php?menu_id=8&page_id=25">動画一覧 &raquo;</a></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="span6">
+                        <div class="thumbnail">
+                            <a href="index.php?menu_id=8&page_id=25">
+                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'7_shokuhin/magurokaitai.jpg'; ?>">
+                            </a>
+                            <div class="caption">
+                                <h3>食品加工</h3>
+                                <p>　食品は加工、調味、保存の知識や技術によって成り立っています。原料の特性を理解し、加工し、製品化します。生活を支え、豊かにしてくれる食品の製造技術を学びます。</p>
+                                <p><a class="btn btn-primary" href="index.php?menu_id=8&page_id=25">動画一覧 &raquo;</a></p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="span4 well well-small">
+
+            <h3>新着動画</h3>
+            <div class="row-fluid">
+                <ul class="thumbnails">
+
+                    <li class="span12">
+                        <div class="thumbnail">
+                            <a href="index.php?menu_id=8&page_id=25">
+                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'7_shokuhin/magurokaitai.jpg'; ?>">
+                            </a>
+                            <div class="caption">
+                                <h3>食品加工</h3>
+                                <p>　食品は加工、調味、保存の知識や技術によって成り立っています。原料の特性を理解し、加工し、製品化します。生活を支え、豊かにしてくれる食品の製造技術を学びます。</p>
+                                <p><a class="btn btn-primary" href="index.php?menu_id=8&page_id=25">動画一覧 &raquo;</a></p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
   </div>
 </div>
 
