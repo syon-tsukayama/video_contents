@@ -3,6 +3,8 @@
  * トップページテンプレート
  */
 
+$displayed_content_ids = array();
+
 // 再生件数を取得する
 $sql =<<<EOS
 SELECT `content_id`, COUNT(`id`) AS `play_count`
@@ -57,6 +59,9 @@ $rank = 0;
         $rank++;
         $content_id = $count_data['content_id'];
         $play_count = $count_data['play_count'];
+
+        // ランキング表示したcontent_idを格納
+        $displayed_content_ids[] = $content_id;
 
         $stmt_select_contents->bindValue(':content_id', $content_id, PDO::PARAM_INT);
         $stmt_select_contents->execute();
