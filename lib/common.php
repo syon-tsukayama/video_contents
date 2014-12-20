@@ -5,7 +5,7 @@
  */
 
 // 設定ファイル読み込み
-require_once('./config.php');
+require_once('./lib/config.php');
 
 /**
  * データベース接続処理
