@@ -352,119 +352,95 @@ foreach($displayed_content_ids as $key => $content_id)
 
 
 
-    <div class="row-fluid">
-        <ul class="thumbnails">
-
-            <li class="span4">
-                <div class="thumbnail">
-                    <a href="index.php?menu_id=2&page_id=2">
-                        <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'1_ro-pu/hitoe.jpg'; ?>">
-                    </a>
-                    <div class="caption">
-                        <h3>結索</h3>
-                        <p>　結索とはロープワークことです。結びの用途は結節、結合、結着などに分類できます。代表的な結索にもやい結び、巻き結び、８の字結び、本結び、錨結び等があります。</p>
-                        <p><a class="btn btn-primary" href="index.php?menu_id=2&page_id=2">動画一覧 &raquo;</a></p>
-                    </div>
-                </div>
-            </li>
-
-            <li class="span4">
-                <div class="thumbnail">
-                    <a href="index.php?menu_id=3&page_id=9">
-                        <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'2_splices/eyesplices.jpg'; ?>">
-                    </a>
-                    <div class="caption">
-                        <h3>アイスプライス</h3>
-                        <p>　スプライスとは、ロープの端に輪（アイ）を作ったり、端止めなどの端末処理の技術です。 ロープを構成しているストランドを、互いに挟み込んだり組み合わせたりして編み込みます。  </p>
-                        <p><a class="btn btn-primary" href="index.php?menu_id=3&page_id=9">動画一覧  &raquo;</a></p>
-                    </div>
-                </div>
-            </li>
-
-            <li class="span4">
-                <div class="thumbnail">
-                    <a href="index.php?menu_id=4&page_id=14">
-                        <img alt="300x200" style="width: 300px; height: 200px;"  src="<?php echo DIR_PATH_IMAGE.'3_henmou/kaeru.jpg'; ?>" >
-                    </a>
-                    <div class="caption">
-                        <h3>編網</h3>
-                        <p>　漁網の編み方を学習します。アバリと目板を使って、本目結びと蛙又結びの２つの方法によって網を編みます。タモ網やハンモックの製作にも応用できます。水産科高校生必須の技術です。 </p>
-                        <p><a class="btn btn-primary" href="index.php?menu_id=4&page_id=14">動画一覧 &raquo;</a></p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-
-    <div class="row-fluid">
-        <ul class="thumbnails">
-            <li class="span4">
-                <div class="thumbnail">
-                    <a href="index.php?menu_id=8&page_id=25">
-                        <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'7_shokuhin/magurokaitai.jpg'; ?>">
-                    </a>
-                    <div class="caption">
-                        <h3>食品加工</h3>
-                        <p>　食品は加工、調味、保存の知識や技術によって成り立っています。原料の特性を理解し、加工し、製品化します。生活を支え、豊かにしてくれる食品の製造技術を学びます。</p>
-                        <p><a class="btn btn-primary" href="index.php?menu_id=8&page_id=25">動画一覧 &raquo;</a></p>
-                    </div>
-                </div>
-            </li>
-
-            <li class="span4">
-                <div class="thumbnail">
-                    <a href="index.php?menu_id=5&page_id=18">
-                        <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'4_mokei/sabani.jpg'; ?>">
-                    </a>
-                    <div class="caption">
-                        <h3>模型製作</h3>
-                        <p>　サバニ模型製作、ミニチュアサーフボード製作を通して船体や機材の構造を知り、製作技術を学びます。とくにサバニ模型製作では、木造船における木工技術を学びます。</p>
-                        <p><a class="btn btn-primary" href="index.php?menu_id=5&page_id=18">動画一覧  &raquo;</a></p>
-                    </div>
-                </div>
-            </li>
-
-            <li class="span4">
-                <div class="thumbnail">
-                    <a href="index.php?menu_id=6&page_id=21">
-                        <img alt="300x200" style="width: 300px; height: 200px;"  src="<?php echo DIR_PATH_IMAGE.'5_gyogu/hariegi.jpg'; ?>">
-                    </a>
-                    <div class="caption">
-                        <h3>漁具製作</h3>
-                        <p>　漁具は網漁具・釣り漁具・雑漁具に大別されます。実習では餌木製作、ルアー製作、仕掛け作りなどの技術を学びます。製作後は海で使ってみましょう。オリジナル漁具を製作してみましょう。 </p>
-                        <p><a class="btn btn-primary" href="index.php?menu_id=6&page_id=21">動画一覧 &raquo;</a></p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-
             <div class="row-fluid">
-
-
-
-
-
                 <ul class="thumbnails">
+
+                    <li class="span4">
                         <div class="thumbnail">
+                            <a href="index.php?menu_id=2&page_id=2">
+                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'1_ro-pu/hitoe.jpg'; ?>">
                             </a>
                             <div class="caption">
-                            </div>
-                        </div>
-
+                                <h3>結索</h3>
+                                <p>　結索とはロープワークことです。結びの用途は結節、結合、結着などに分類できます。代表的な結索にもやい結び、巻き結び、８の字結び、本結び、錨結び等があります。</p>
+                                <p><a class="btn btn-primary" href="index.php?menu_id=2&page_id=2">動画一覧 &raquo;</a></p>
                             </div>
                         </div>
                     </li>
 
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <a href="index.php?menu_id=3&page_id=9">
+                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'2_splices/eyesplices.jpg'; ?>">
+                            </a>
+                            <div class="caption">
+                                <h3>アイスプライス</h3>
+                                <p>　スプライスとは、ロープの端に輪（アイ）を作ったり、端止めなどの端末処理の技術です。 ロープを構成しているストランドを、互いに挟み込んだり組み合わせたりして編み込みます。  </p>
+                                <p><a class="btn btn-primary" href="index.php?menu_id=3&page_id=9">動画一覧  &raquo;</a></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <a href="index.php?menu_id=4&page_id=14">
+                                <img alt="300x200" style="width: 300px; height: 200px;"  src="<?php echo DIR_PATH_IMAGE.'3_henmou/kaeru.jpg'; ?>" >
+                            </a>
+                            <div class="caption">
+                                <h3>編網</h3>
+                                <p>　漁網の編み方を学習します。アバリと目板を使って、本目結びと蛙又結びの２つの方法によって網を編みます。タモ網やハンモックの製作にも応用できます。水産科高校生必須の技術です。 </p>
+                                <p><a class="btn btn-primary" href="index.php?menu_id=4&page_id=14">動画一覧 &raquo;</a></p>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
-
-
             </div>
+
+
+            <div class="row-fluid">
+                <ul class="thumbnails">
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <a href="index.php?menu_id=8&page_id=25">
+                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'7_shokuhin/magurokaitai.jpg'; ?>">
+                            </a>
+                            <div class="caption">
+                                <h3>食品加工</h3>
+                                <p>　食品は加工、調味、保存の知識や技術によって成り立っています。原料の特性を理解し、加工し、製品化します。生活を支え、豊かにしてくれる食品の製造技術を学びます。</p>
+                                <p><a class="btn btn-primary" href="index.php?menu_id=8&page_id=25">動画一覧 &raquo;</a></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <a href="index.php?menu_id=5&page_id=18">
+                                <img alt="300x200" style="width: 300px; height: 200px;" src="<?php echo DIR_PATH_IMAGE.'4_mokei/sabani.jpg'; ?>">
+                            </a>
+                            <div class="caption">
+                                <h3>模型製作</h3>
+                                <p>　サバニ模型製作、ミニチュアサーフボード製作を通して船体や機材の構造を知り、製作技術を学びます。とくにサバニ模型製作では、木造船における木工技術を学びます。</p>
+                                <p><a class="btn btn-primary" href="index.php?menu_id=5&page_id=18">動画一覧  &raquo;</a></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="span4">
+                        <div class="thumbnail">
+                            <a href="index.php?menu_id=6&page_id=21">
+                                <img alt="300x200" style="width: 300px; height: 200px;"  src="<?php echo DIR_PATH_IMAGE.'5_gyogu/hariegi.jpg'; ?>">
+                            </a>
+                            <div class="caption">
+                                <h3>漁具製作</h3>
+                                <p>　漁具は網漁具・釣り漁具・雑漁具に大別されます。実習では餌木製作、ルアー製作、仕掛け作りなどの技術を学びます。製作後は海で使ってみましょう。オリジナル漁具を製作してみましょう。 </p>
+                                <p><a class="btn btn-primary" href="index.php?menu_id=6&page_id=21">動画一覧 &raquo;</a></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
         </div>
     </div>
-
-  </div>
-</div>
-
 
