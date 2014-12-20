@@ -16,8 +16,12 @@ function cmn_connect_db()
     global $_db_user;
     global $_db_password;
 
+    $options = array(
+        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
+        );
+
     // データベース接続
-    $conn = new PDO($_dsn, $_db_user, $_db_password);
+    $conn = new PDO($_dsn, $_db_user, $_db_password, $options);
 
     return $conn;
 }
