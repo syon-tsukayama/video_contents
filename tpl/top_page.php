@@ -141,6 +141,114 @@ $rank = 0;
 ?>
                 </ul>
             </div><!--/.well -->
+
+<?php
+// 新着動画検索
+$sql =<<<EOS
+SELECT `id`, `title`, `content`, `image_name`, `mp4_file_name`, `ogv_file_name`
+FROM `contents_table`
+WHERE `publish_status` = 1
+ORDER BY `updated` DESC
+LIMIT 3;
+EOS;
+
+$stmt_select_contents_new = $conn->prepare($sql);
+$stmt_select_contents_new->execute();
+
+$new_contents = array();
+
+// 検索結果取得
+while($row = $stmt_select_contents_new->fetch())
+{
+    // 新着堂が表示するcontent_idを格納
+    $displayed_content_ids[] = $row['id'];
+
+    $new_contents[] = $row;
+}
+
+$displayed_content_ids = array_unique($displayed_content_ids);
+$count = 0;
+$$bind_param = '';
+foreach($displayed_content_ids as $key => $content_id)
+{
+    $bind_param .= ':content_id_'.$key;
+
+    $count++;
+
+    if($count < count($displayed_content_ids))
+    {
+        $bind_param .= ', ';
+    }
+}
+?>
+            <div class="well well-small">
+
+                <h3>新着動画</h3>
+                <div class="row-fluid">
+
+                    <?php
+                    if(!empty($new_contents)):
+                        foreach($new_contents as $row):
+
+                            $row_count++;
+
+                            $content_id = $row['id'];
+
+                            $modal_id = 'movie_modal_'.$row_count;
+
+                            $image_path = DIR_PATH_IMAGE.$row['image_name'];
+
+                            $mp4_file_path = DIR_PATH_MP4.$row['mp4_file_name'];
+
+                            $ogv_file_path = DIR_PATH_OGV.$row['ogv_file_name'];
+                    ?>
+                    <ul class="thumbnails">
+
+                        <li class="span12">
+
+                            <div class="thumbnail">
+                                <a data-target="#<?php echo $modal_id; ?>" data-toggle="modal" href="#" class="play_count" data-content_id="<?php echo $content_id; ?>">
+                                    <img alt="<?php echo $row['title']; ?>" style="width: 300px; height: 200px;" src="<?php echo $image_path; ?>">
+                                </a>
+                                <div class="caption">
+                                    <h3><?php echo $row['title']; ?></h3>
+                                    <p><?php echo $row['content']; ?></p>
+                                    <p>
+                                        <a class="btn btn-primary play_count" data-target="#<?php echo $modal_id; ?>" data-toggle="modal" href="#" data-content_id="<?php echo $content_id; ?>">再生</a>
+                                        <a class="btn play_count" href="<?php echo $mp4_file_path; ?>" data-content_id="<?php echo $content_id; ?>">mp4</a>
+                                        <a class="btn play_count" href="<?php echo $ogv_file_path; ?>" data-content_id="<?php echo $content_id; ?>">ogv</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div id="<?php echo $modal_id; ?>" class="modal hide fade" tabindex="-1">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h3><?php echo $row['title']; ?></h3>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        <video poster="<?php echo $image_path; ?>" width="320" height="180" controls loop preload="none">
+                                            <source src="<?php echo $mp4_file_path; ?>">
+                                            <source src="<?php echo $ogv_file_path; ?>">
+                                            <p>動画を再生するには、videoタグをサポートしたブラウザが必要です。</p>
+                                        </video>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                    <?php
+                        endforeach;
+                    endif;
+                    ?>
+
+                </div>
+            </div>
+
         </div><!--/span-->
 
 
@@ -332,111 +440,25 @@ $rank = 0;
         </ul>
     </div>
 
-<?php
-// 新着動画検索
-$sql =<<<EOS
-SELECT `id`, `title`, `content`, `image_name`, `mp4_file_name`, `ogv_file_name`
-FROM `contents_table`
-WHERE `publish_status` = 1
-ORDER BY `updated` DESC
-LIMIT 3;
-EOS;
-
-$stmt_select_contents_new = $conn->prepare($sql);
-$stmt_select_contents_new->execute();
-
-$new_contents = array();
-
-// 検索結果取得
-while($row = $stmt_select_contents_new->fetch())
-{
-    // 新着堂が表示するcontent_idを格納
-    $displayed_content_ids[] = $row['id'];
-
-    $new_contents[] = $row;
-}
-
-$displayed_content_ids = array_unique($displayed_content_ids);
-$count = 0;
-$$bind_param = '';
-foreach($displayed_content_ids as $key => $content_id)
-{
-    $bind_param .= ':content_id_'.$key;
-
-    $count++;
-
-    if($count < count($displayed_content_ids))
-    {
-        $bind_param .= ', ';
-    }
-}
-?>
-    <div class="row-fluid">
-
-        <div class="span4 well well-small">
-
-            <h3>新着動画</h3>
             <div class="row-fluid">
 
-                <?php
-                if(!empty($new_contents)):
-                    foreach($new_contents as $row):
 
-                        $row_count++;
 
-                        $content_id = $row['id'];
 
-                        $modal_id = 'movie_modal_'.$row_count;
 
-                        $image_path = DIR_PATH_IMAGE.$row['image_name'];
-
-                        $mp4_file_path = DIR_PATH_MP4.$row['mp4_file_name'];
-
-                        $ogv_file_path = DIR_PATH_OGV.$row['ogv_file_name'];
-                ?>
                 <ul class="thumbnails">
-
-                    <li class="span12">
-
                         <div class="thumbnail">
-                            <a data-target="#<?php echo $modal_id; ?>" data-toggle="modal" href="#" class="play_count" data-content_id="<?php echo $content_id; ?>">
-                                <img alt="<?php echo $row['title']; ?>" style="width: 300px; height: 200px;" src="<?php echo $image_path; ?>">
                             </a>
                             <div class="caption">
-                                <h3><?php echo $row['title']; ?></h3>
-                                <p><?php echo $row['content']; ?></p>
-                                <p>
-                                    <a class="btn btn-primary play_count" data-target="#<?php echo $modal_id; ?>" data-toggle="modal" href="#" data-content_id="<?php echo $content_id; ?>">再生</a>
-                                    <a class="btn play_count" href="<?php echo $mp4_file_path; ?>" data-content_id="<?php echo $content_id; ?>">mp4</a>
-                                    <a class="btn play_count" href="<?php echo $ogv_file_path; ?>" data-content_id="<?php echo $content_id; ?>">ogv</a>
-                                </p>
                             </div>
                         </div>
 
-                        <div id="<?php echo $modal_id; ?>" class="modal hide fade" tabindex="-1">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h3><?php echo $row['title']; ?></h3>
-                            </div>
-                            <div class="modal-body">
-                                <p>
-                                    <video poster="<?php echo $image_path; ?>" width="320" height="180" controls loop preload="none">
-                                        <source src="<?php echo $mp4_file_path; ?>">
-                                        <source src="<?php echo $ogv_file_path; ?>">
-                                        <p>動画を再生するには、videoタグをサポートしたブラウザが必要です。</p>
-                                    </video>
-                                </p>
                             </div>
                         </div>
-
                     </li>
 
                 </ul>
 
-                <?php
-                    endforeach;
-                endif;
-                ?>
 
             </div>
         </div>
