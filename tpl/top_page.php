@@ -32,7 +32,7 @@ while($row = $stmt_select_play_logs->fetch())
 
     <div class="row-fluid">
         <div class="span3">
-            <div class="well sidebar-nav">
+            <div class="alert alert-info">
 
                 <ul class="nav nav-list">
                     <li class="nav-header"><h4>人気動画ランキング３</h4></li>
@@ -149,7 +149,7 @@ SELECT `id`, `title`, `content`, `image_name`, `mp4_file_name`, `ogv_file_name`
 FROM `contents_table`
 WHERE `publish_status` = 1
 ORDER BY `updated` DESC
-LIMIT 3;
+LIMIT 2;
 EOS;
 
 $stmt_select_contents_new = $conn->prepare($sql);
@@ -181,9 +181,9 @@ foreach($displayed_content_ids as $key => $content_id)
     }
 }
 ?>
-            <div class="well well-small">
+            <div class="alert alert-success">
 
-                <h3>新着動画</h3>
+                <h4>新着動画</h4>
                 <div class="row-fluid">
 
                     <?php
@@ -208,15 +208,14 @@ foreach($displayed_content_ids as $key => $content_id)
 
                             <div class="thumbnail">
                                 <a data-target="#<?php echo $modal_id; ?>" data-toggle="modal" href="#" class="play_count" data-content_id="<?php echo $content_id; ?>">
-                                    <img alt="<?php echo $row['title']; ?>" style="width: 300px; height: 200px;" src="<?php echo $image_path; ?>">
+                                    <img alt="<?php echo $row['title']; ?>" style="width: 240px; height: 150px;" src="<?php echo $image_path; ?>">
                                 </a>
                                 <div class="caption">
-                                    <h3><?php echo $row['title']; ?></h3>
-                                    <p><?php echo $row['content']; ?></p>
+                                    <h5><?php echo $row['title']; ?></h5>
+
                                     <p>
                                         <a class="btn btn-primary play_count" data-target="#<?php echo $modal_id; ?>" data-toggle="modal" href="#" data-content_id="<?php echo $content_id; ?>">再生</a>
-                                        <a class="btn play_count" href="<?php echo $mp4_file_path; ?>" data-content_id="<?php echo $content_id; ?>">mp4</a>
-                                        <a class="btn play_count" href="<?php echo $ogv_file_path; ?>" data-content_id="<?php echo $content_id; ?>">ogv</a>
+
                                     </p>
                                 </div>
                             </div>
@@ -351,7 +350,7 @@ foreach($displayed_content_ids as $key => $content_id)
 
 
 
-
+       <div class="alert alert-block">
             <div class="row-fluid">
                 <ul class="thumbnails">
 
@@ -395,8 +394,9 @@ foreach($displayed_content_ids as $key => $content_id)
                     </li>
                 </ul>
             </div>
+       </div>
 
-
+       <div class="alert alert-block">
             <div class="row-fluid">
                 <ul class="thumbnails">
                     <li class="span4">
@@ -443,4 +443,4 @@ foreach($displayed_content_ids as $key => $content_id)
 
         </div>
     </div>
-
+ </div>
