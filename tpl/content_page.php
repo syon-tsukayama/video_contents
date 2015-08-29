@@ -17,7 +17,7 @@
 $sql =<<<EOS
 SELECT `id`, `name`, `order_no`
 FROM `pages_table`
-WHERE `menu_id` = :menu_id AND `publish_status` = 1
+WHERE `menu_id` = :menu_id AND `publish_status` = 1 AND `order_no` > 1
 ORDER BY `order_no` ASC;
 EOS;
 

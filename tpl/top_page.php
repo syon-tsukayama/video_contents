@@ -260,8 +260,10 @@ foreach($displayed_content_ids as $key => $content_id)
 
             <div class="jumbotron">
 
-                <h2>Welcome!　Fishery and Ocean Technologies!!</h2>
-                <h3>目指せ、水産マイスター！　Just do it！</h3>
+                <div class="container">
+                    <h2>Welcome!　Fishery and Ocean Technologies!!</h2>
+                    <h3>目指せ、水産マイスター！　Just do it！</h3>
+                </div>
 
                 <div class="hidden-xs">
                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
