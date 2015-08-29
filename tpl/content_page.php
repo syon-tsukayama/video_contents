@@ -6,9 +6,9 @@
 ?>
 
 
-    <div class="row-fluid">
-        <div class="span3">
-            <div class="well sidebar-nav">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="well">
 
                 <ul class="nav nav-list">
                     <li class="nav-header">Sidebar</li>
@@ -42,7 +42,8 @@ while($row = $stmt->fetch())
             </div><!--/.well -->
         </div><!--/span-->
 
-        <div class="span9">
+        <div class="col-md-9">
+            <div class="container-fluid">
 
 <?php
 $sql =<<<EOS
@@ -72,6 +73,7 @@ if(!empty($row['remark']))
 ?>
 
             <br>
+                <div class="row">
 
 <?php
 
@@ -109,14 +111,6 @@ EOS;
     {
         $row_count++;
 
-        if(($row_count % 3) === 1)
-        {
-?>
-            <div class="row-fluid">
-                <ul class="thumbnails">
-<?php
-        }
-
         $content_id = $row['id'];
 
         $modal_id = 'movie_modal_'.$row_count;
@@ -128,7 +122,8 @@ EOS;
         $ogv_file_path = DIR_PATH_OGV.$row['ogv_file_name'];
 ?>
 
-                    <li class="span4">
+
+                    <div class="col-md-4">
                         <div class="thumbnail">
                             <a data-target="#<?php echo $modal_id; ?>" data-toggle="modal" href="#" class="play_count" data-content_id="<?php echo $content_id; ?>">
                                 <img alt="<?php echo $row['title']; ?>" style="width: 300px; height: 200px;" src="<?php echo $image_path; ?>">
@@ -138,41 +133,43 @@ EOS;
                                 <p><?php echo $row['content']; ?></p>
                                 <p>
                                     <a class="btn btn-primary play_count" data-target="#<?php echo $modal_id; ?>" data-toggle="modal" href="#" data-content_id="<?php echo $content_id; ?>">再生</a>
-                                    <a class="btn play_count" href="<?php echo $mp4_file_path; ?>" data-content_id="<?php echo $content_id; ?>">mp4</a>
-                                    <a class="btn play_count" href="<?php echo $ogv_file_path; ?>" data-content_id="<?php echo $content_id; ?>">ogv</a>
+                                    &nbsp;
+                                    <a class="btn btn-default play_count" href="<?php echo $mp4_file_path; ?>" data-content_id="<?php echo $content_id; ?>">mp4</a>
+                                    &nbsp;
+                                    <a class="btn btn-default play_count" href="<?php echo $ogv_file_path; ?>" data-content_id="<?php echo $content_id; ?>">ogv</a>
                                 </p>
                             </div>
                         </div>
 
-                        <div id="<?php echo $modal_id; ?>" class="modal hide fade" tabindex="-1">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h3><?php echo $row['title']; ?></h3>
-                            </div>
-                            <div class="modal-body">
-                                <p>
-                                    <video poster="<?php echo $image_path; ?>" width="320" height="180" controls loop preload="none">
-                                        <source src="<?php echo $mp4_file_path; ?>">
-                                        <source src="<?php echo $ogv_file_path; ?>">
-                                        <p>動画を再生するには、videoタグをサポートしたブラウザが必要です。</p>
-                                    </video>
-                                </p>
+                        <div id="<?php echo $modal_id; ?>" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h3><?php echo $row['title']; ?></h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <video poster="<?php echo $image_path; ?>" controls loop preload="none" class="embed-responsive-item">
+                                                <source src="<?php echo $mp4_file_path; ?>">
+                                                <source src="<?php echo $ogv_file_path; ?>">
+                                                <p>動画を再生するには、videoタグをサポートしたブラウザが必要です。</p>
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                    </li>
+                    </div>
 
 <?php
-        if(($row_count % 3) === 0 || $row_count == $total_count)
-        {
-?>
-                </ul>
-            </div>
-<?php
-        }
     }
 }
 ?>
 
+                </div>
+            </div>
         </div><!--/span-->
     </div><!--/row-->

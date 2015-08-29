@@ -33,7 +33,7 @@
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
-        <script src="./js/jquery-1.13.3.min.js"></script>
+        <script src="./js/jquery-1.11.3.min.js"></script>
     </head>
 
     <body>
@@ -75,17 +75,20 @@ else
 }
 
     ?>
+    <div class="container-fluid">
+
         <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container-fluid">
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <div class="container-fluid">
+                <div class="navbar-inner">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="#">水産・海洋実習</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
+                    <a class="navbar-brand" href="#">水産・海洋実習</a>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
 <?php
 // メニュー情報を検索するSQL実行
 $sql =<<<EOS
@@ -107,13 +110,17 @@ while($row = $stmt->fetch())
   if($row['id'] == $menu_id)
   {
 ?>
-              <li class="active"><a href="<?php echo $menu_url; ?>"><?php echo $row['name']; ?></a></li>
+              <li class="active">
+                  <a href="<?php echo $menu_url; ?>"><?php echo $row['name']; ?></a>
+              </li>
 <?php
   }
   else
   {
 ?>
-              <li><a href="<?php echo $menu_url; ?>"><?php echo $row['name']; ?></a></li>
+              <li>
+                  <a href="<?php echo $menu_url; ?>"><?php echo $row['name']; ?></a>
+              </li>
 <?php
 }
 }
@@ -142,11 +149,13 @@ $row = $stmt->fetch();
 if(empty($row['template_name']) || !is_file('./tpl/'.$row['template_name']))
 {
 ?>
-            <div class="row-fluid">
-                <div class="span12">
+            <div class="row">
+                <div class="col-md-12">
 
-                    <div class="alert alert-error">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <div class="alert alert-danger" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                         <strong>Warning!</strong> このページは現在、開発中につき閲覧できません。
                     </div>
 
@@ -167,6 +176,7 @@ else
             </footer>
 
         </div><!--/.fluid-container-->
+    </div><!--/.fluid-container-->
 
         <!-- Le javascript
         ================================================== -->
