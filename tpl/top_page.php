@@ -31,7 +31,7 @@ while($row = $stmt_select_play_logs->fetch())
 
 
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-sm-4 col-md-3">
 
             <div class="alert alert-info" role="alert">
                 <div class="container-fluid">
@@ -57,7 +57,7 @@ EOS;
 
     // 検索結果取得
     $row_count = 0;
-$rank = 0;
+    $rank = 0;
     foreach($play_counts as $count_data)
     {
         $rank++;
@@ -256,7 +256,7 @@ foreach($displayed_content_ids as $key => $content_id)
         </div><!--/span-->
 
 
-        <div class="col-md-9">
+        <div class="col-sm-8 col-md-9">
 
             <div class="jumbotron">
 
